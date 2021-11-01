@@ -1,0 +1,24 @@
+<div class="ext-syndicate-menu" [class.expanded]="expanded">
+  <div class="ext-syndicate-menu__items">
+    <div class="menu-item" routerLinkActive="active" [routerLink]="['/analysis/input']">
+      <!-- <i class="fas fa-camera fa-2x"></i> -->
+      <i class="fas fa-upload fa-2x"></i>
+      <span>Input</span>
+    </div>
+    <div class="menu-item" routerLinkActive="active" [routerLink]="['/analysis/classification']">
+      <i class="fas fa-circle-notch fa-2x"></i>
+      <span>Classification</span>
+    </div>
+    <div class="menu-item" routerLinkActive="active" [routerLink]="['/analysis/entities']">
+      <i class="fas fa-address-card fa-2x"></i>
+      <span>Entities</span>
+    </div>
+    <div class="menu-item" routerLinkActive="active" [routerLink]="['/analysis/key-elements']">
+      <i class="fas fa-highlighter fa-2x"></i>
+      <span>Key Elements</span>
+    </div>
+  </div>
+  <div class="ext-syndicate-menu__collapse" (click)="toggleExpand()">
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</div>

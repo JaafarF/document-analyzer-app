@@ -1,0 +1,9 @@
+.analysis-container {
+  display: flex;
+  height: calc(100vh - 5.5rem - 4rem);
+
+  &__content {
+    flex: 1 1 0;
+    overflow-y: auto;
+  }
+}

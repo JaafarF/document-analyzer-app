@@ -1,0 +1,10 @@
+
+<p-fileUpload
+        name="uploadedFiles[]"
+        (uploadHandler)="onUpload($event);"
+        accept=".txt"
+        [maxFileSize]="2000000"
+        [showUploadButton]="true"
+      	[showCancelButton]="false"
+        [customUpload]="true" >
+</p-fileUpload>

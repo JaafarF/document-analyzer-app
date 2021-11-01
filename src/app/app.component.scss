@@ -1,0 +1,8 @@
+.ext-homepage {
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    flex: 1 1 0;
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../scss/color";
+@import "../../scss/typography";
+
+.ext-header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: $ext-white;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+  font-size: 1.7rem;
+
+  &__logo {
+    position: relative;
+    margin: 0 2rem;
+    width: 24rem;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+  }
+
+  &__nav-menu {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    color: $ext-gray;
+
+    > div {
+      margin: 0 2rem;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .active {
+      font-size: 1.6rem;
+      color: $ext-dark-blue;
+      border-bottom: 1px solid;
+    }
+  }
+
+  &__user-menu {
+    display: flex;
+    align-items: center;
+
+    > span {
+      color: $primary;
+      margin-right: 2rem;
+      cursor: pointer;
+    }
+  }
+}

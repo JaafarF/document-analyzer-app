@@ -1,0 +1,68 @@
+@import "../../../scss/color";
+
+.ext-syndicate-menu {
+  height: 100%;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $ext-gray;
+  color: $ext-white;
+  padding: 2rem 0 2rem 2rem;
+  transition: all .5s ease;
+
+  &__items {
+    flex: 1 1 0;
+
+    .menu-item {
+      height: 6rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+      > span {
+        margin: 1rem 1rem 1rem 3rem;
+        transition: opacity 1.5s ease;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      &.active, &:hover {
+        outline: none;
+        color: $ext-blue;
+        border-right: .8rem solid $ext-blue;
+      }
+    }
+  }
+
+  &__collapse {
+    display: flex;
+    cursor: pointer;
+    font-size: 2rem;
+    .icon-collapse {
+
+    }
+  }
+
+  &.expanded .ext-syndicate-menu__collapse {
+
+    transform: scaleX(-1);
+    justify-content: right;
+
+    .menu-item span {
+      /* visibility: visible;
+      opacity: 1;
+      transition: all 3s ease; */
+    }
+  }
+
+  &:not(.expanded) {
+    width: 8rem;
+    .menu-item span {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+  }
+}
+

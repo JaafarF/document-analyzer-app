@@ -1,0 +1,16 @@
+<div class="table">
+  <div class="table-header">
+    <div>id</div>
+    <div>label</div>
+    <div>path</div>
+    <div>frequency</div>
+  </div>
+  <div id="contact-list">
+    <div class="table-row block" *ngFor="let cat of categories" (click)=selectCategory(cat)>
+      <div>{{ cat.id }}</div>
+      <div>{{ cat.label }}</div>
+      <div>{{ cat.hierarchy }}</div>
+      <div>{{ cat.frequency }}%</div>
+    </div>
+  </div>
+</div>

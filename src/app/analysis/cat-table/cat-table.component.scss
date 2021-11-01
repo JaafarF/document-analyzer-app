@@ -1,0 +1,40 @@
+@import "../../../scss/color";
+
+.table {
+  font-size: 1.5rem;
+}
+
+.table-header {
+  font-weight: bold;
+  color: $ext-white;
+  background-color: $ext-light-blue;
+  padding: 1rem 1rem;
+  margin-bottom: .5rem;
+  border-radius: 8px;
+}
+
+.table-row {
+  padding: 1rem;
+  background-color: $ext-white;
+  margin-bottom: .5rem;
+  box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.10);
+}
+
+.table-header div {
+  display: inline-block;
+  width: 15%;
+}
+
+.table-row div {
+  display: inline-block;
+  width: 15%;
+  cursor: pointer;
+}
+
+.table-header div:nth-child(3) {
+  width: 50%;
+}
+
+.table-row div:nth-child(3) {
+  width: 50%;
+}

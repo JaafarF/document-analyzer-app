@@ -1,0 +1,32 @@
+@import "../../../scss/color";
+@import "../../../scss/typography";
+@import "../../../scss/block";
+
+.ext-upload {
+  padding: 10rem 3rem 0 3rem;
+  max-width: 122rem;
+  width: 70%;
+  margin: 0 auto;
+
+  > h3 {
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid $ext-gray-200;
+    font-size: $h3-font-size;
+    color: $primary;
+  }
+
+  &-input {
+    color: $ext-gray-900;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.uploader {
+  width: 100%;
+}
+

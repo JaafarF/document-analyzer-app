@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
+@import "./scss/color";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box !important;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $ext-gray-800;
+  height: 100vh;
+  background-color: $ext-gray-100;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+app-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    flex: 1 1 0;
+  }
+}
+
+
+.p-fileupload {
+  /* margin-right: 4.5rem !important;
+  font-size: 4rem;
+  height:200px;
+    width:200px; */
+}
+
+.p-fileupload .p-fileupload-buttonbar .p-button {
+  margin-right: 4.5rem !important;
+  width:100px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.p-fileupload .p-fileupload-buttonbar .p-button .p-button-icon {
+  font-size: 1rem;
+}
+
+.p-fileupload .p-fileupload-buttonbar .p-button .p-button-label {
+  font-size: 1.2rem;
+}
+
+.p-fileupload .p-fileupload-row > div {
+  padding: 1rem 0rem;
+  font-size: 1.3rem;
+}
+
+.p-fileupload .p-fileupload-row > div:nth-child(1) {
+  display: none;
+}

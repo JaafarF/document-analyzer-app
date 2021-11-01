@@ -1,0 +1,13 @@
+
+.p-fileupload {
+  margin-right: 4.5rem !important;
+  font-size: 4rem;
+  height:200px;
+    width:200px;
+}
+
+.p-fileupload .p-fileupload-buttonbar button:nth-child(3):disabled{
+  opacity: 0;
+  cursor:default;
+  display: none;
+}

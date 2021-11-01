@@ -1,0 +1,14 @@
+
+<div class="ext-class">
+  <h3>Document Classification</h3>
+  <div class="ext-block">
+    <h4>List of categories</h4>
+    <app-cat-table [categories]="categories"></app-cat-table>
+    <br>
+    <h4>Classification in percentages %</h4>
+    <p-chart width="100%" height="300px" type="doughnut" [data]="datadoughnut" [options]="options" (onDataSelect)="selectData($event)"></p-chart>
+
+  </div>
+</div>
+
+
