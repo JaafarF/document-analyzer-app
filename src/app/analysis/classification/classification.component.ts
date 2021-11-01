@@ -3,9 +3,7 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Category } from 'src/app/model/category';
 import { Document } from 'src/app/model/document';
-import { Product } from 'src/app/model/products';
 import { StorageService } from 'src/app/storage.service';
-import { ClassificationService } from './classification.service';
 
 @Component({
   selector: 'app-classification',
@@ -14,7 +12,6 @@ import { ClassificationService } from './classification.service';
 })
 export class ClassificationComponent implements OnInit {
 
-  products: Product[] = [];
   document!: Document;
   categories: Category[] = [];
 
@@ -26,7 +23,7 @@ export class ClassificationComponent implements OnInit {
   options: any;
   subscription!: Subscription;
 
-  constructor(private router: Router, private classificationService: ClassificationService, private storageService: StorageService) {}
+  constructor(private router: Router, private storageService: StorageService) {}
 
 
 
@@ -34,7 +31,6 @@ export class ClassificationComponent implements OnInit {
     const initialDocument: Document = this.storageService.getDocumentFromStorage();
     this.document = initialDocument;
     this.categories = initialDocument!.categories!;
-    this.categories.pop();
     this.document!.categories!.forEach(category => {
       this.data.push(category.frequency!);
       this.color.push(category.color!);
@@ -85,11 +81,11 @@ export class ClassificationComponent implements OnInit {
 
 
     };
-
-    this.classificationService.getProducts().then(data => this.products = data);
   }
 
   selectData(event: any) {
+    console.log(event.element.index);
+    console.log(this.document!.categories!.length -1);
     if(event.element.index != this.document!.categories!.length -1) {
       let category: Category = this.document!.categories![event.element.index];
       this.storageService.saveCategory(category);

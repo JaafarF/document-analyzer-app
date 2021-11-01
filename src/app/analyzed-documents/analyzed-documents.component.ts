@@ -1,11 +1,8 @@
-import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { LoaderService } from '../loader.service';
-import { Category } from '../model/category';
 import { Document } from '../model/document';
-import { Product } from '../model/products';
 import { StorageService } from '../storage.service';
 import { AnalyzedDocumentsService } from './analyzed-documents.service';
 
@@ -33,9 +30,6 @@ export class AnalyzedDocumentsComponent implements OnInit {
         this.getAllDocuments();
       }
     });
-    //this.analyzedDocumentsService.getProducts().then(data => this.products = data);
-
-
   }
 
   getAllDocuments() {

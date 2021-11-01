@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StorageService } from 'src/app/storage.service';
 import { FileUploadService } from './file-upload.service';
-import { Category } from 'src/app/model/category';
 import { Document } from 'src/app/model/document';
 import { LoaderService } from 'src/app/loader.service';
 
@@ -41,7 +40,8 @@ export class FileUploadComponent implements OnInit {
         this.router.navigateByUrl('/analysis/classification');
       },
       (errorResponse: HttpErrorResponse) => {
-        console.log("error");
+        this.loaderService.hide();
+        alert(errorResponse.error.message);
       }
     );
   }

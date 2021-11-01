@@ -18,7 +18,6 @@ import { CatTableComponent } from './cat-table/cat-table.component';
 
 import { FileUploadService } from "./input/file-upload/file-upload.service";
 import { FormsModule } from "@angular/forms";
-import { ClassificationService } from "./classification/classification.service";
 import { CommonModule } from "@angular/common";
 
 
@@ -53,6 +52,6 @@ import { CommonModule } from "@angular/common";
     TableModule,
     ProgressSpinnerModule
   ],
-  providers: [FileUploadService, ClassificationService]
+  providers: [FileUploadService]
 })
 export class AnalysisModule{}
