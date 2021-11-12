@@ -1,10 +1,14 @@
 # DocumentAnalyzerApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+
+## Application Demo : [DEMO](http://173.249.32.142/)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+The backend server (localhost) is configured to run on port 8080. If you will use an other prot on backend server, please modify in environment.ts file.
 
 ## Code scaffolding
 
